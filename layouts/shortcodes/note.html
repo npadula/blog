@@ -1,0 +1,4 @@
+<aside>
+	{{ with (.Get "title") }}<h4>{{ . }}</h4>{{ end }}
+	{{ .Inner | markdownify }}
+</aside>

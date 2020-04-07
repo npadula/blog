@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Nicolas Padula</title>
+    <link>https://npadula.github.io/blog/tags/</link>
+    <description>Recent content in Tags on Nicolas Padula</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 07 Apr 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://npadula.github.io/blog/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ef</title>
+      <link>https://npadula.github.io/blog/tags/ef/</link>
+      <pubDate>Tue, 07 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://npadula.github.io/blog/tags/ef/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hugoBasicSite</title>
+      <link>https://npadula.github.io/blog/tags/hugobasicsite/</link>
+      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://npadula.github.io/blog/tags/hugobasicsite/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

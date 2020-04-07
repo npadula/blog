@@ -1,0 +1,16 @@
+{{ define "main" }}
+<main class=single>
+	<header>
+		<div id=sitetitle>{{ .Site.Title }}:</div>
+		<h1>{{ .Title }}</h1>
+		{{ with .Page.Date }}<time>{{ .Format "2 Jan 2006" }}</time>{{ end }}
+		<div id=description>{{ .Param "description" }}</div>
+	</header>
+	<article class=single>
+		<aside id=toc>
+			{{ .TableOfContents }}
+		</aside>
+		<span id=dropcap></span>{{ .Content }}
+	</article>
+</main>
+{{ end }}

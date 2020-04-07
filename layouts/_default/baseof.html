@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>{{ if not .IsHome }}{{ .Title }} &middot; {{ end }}{{ .Site.Title }}</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="{{ relURL `/style.css` }}"/>
+</head>
+<body>
+	<nav><a href="{{ .Site.BaseURL }}"><img src="{{ relURL `/home.svg` }}"></a></nav>
+	{{ block "main" . }}{{ end }}
+</body>
+</html>

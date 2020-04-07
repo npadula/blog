@@ -1,0 +1,13 @@
+baseURL = "https://npadula.github.io/blog"
+title = "Nicolas Padula"
+publishDir = "docs"
+
+[permalinks]
+  posts = "/:title/"
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[markup.highlight]
+  style = "pygments"
+  tabWidth = 2

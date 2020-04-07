@@ -1,0 +1,22 @@
+{{ define "main" }}
+<main>
+	<header>
+		<div id=sitetitle>{{ .Site.Title }}:</div>
+		<h1>Contents</h1>
+	</header>
+	<article>
+		<ol class=home>
+		{{ range $index, $page := .Site.RegularPages }}
+			<li class=home>
+				<div class=number>{{ printf "%02d" $index }}</div>
+				<div class=details>
+					{{ with $page.Date }}<time class=home>{{ .Format "2 Jan 2006" }}</time>{{ end }}
+					<a href="{{ .RelPermalink }}"><h2 class=home>{{ $page.Title }}</h2></a>
+					<div class=subtitle>{{ with $page.Param "description" }}{{ . }}{{ end }}</div>
+				</div>
+			</li>
+		{{ end }}
+		</ol>
+	</article>
+</main>
+{{ end }}
