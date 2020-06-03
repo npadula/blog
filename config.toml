@@ -1,5 +1,5 @@
 author = "The Abstractionist"
-baseurl = "/"
+baseurl = "https://npadula.com/blog/"
 canonifyurls = true
 copyright = ""
 paginate = 5
