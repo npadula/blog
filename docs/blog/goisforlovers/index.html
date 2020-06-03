@@ -12,28 +12,28 @@
     <meta property="og:site_name" content="The Abstractionist" />
     <meta property="og:locale" content="nn_NO" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="/blog/goisforlovers/" />
+    <meta property="og:url" content="/blog/blog/goisforlovers/" />
     <meta property="og:title" content="(Hu)go Template Primer" />
-    <meta property="og:image" content="/" />
+    <meta property="og:image" content="/blog/" />
     <meta property="og:description" content="" />
 
     
 
     <meta property="twitter:title" content="(Hu)go Template Primer" />
-    <meta property="twitter:image" content="/" />
+    <meta property="twitter:image" content="/blog/" />
     <meta property="twitter:card" content="summary" />
     <meta property="twitter:description" content="" />
 
     
 
-    <link rel="canonical" href="/blog/goisforlovers/">
+    <link rel="canonical" href="/blog/blog/blog/goisforlovers/">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/blog/blog/css/main.css" />
 
     
-        <link rel="stylesheet" href="/css/highlight.css" />
+        <link rel="stylesheet" href="/blog/blog/css/highlight.css" />
     
 
     
@@ -41,7 +41,7 @@
     
 
     <link rel="shortcut icon"
-          href="/img/favicon.ico">
+          href="/blog/blog/img/favicon.ico">
 
     <link href='' rel="alternate" type="application/rss+xml" title="The Abstractionist" />
     <link href="https://fonts.googleapis.com/css?family=Fira+Code|Merriweather+Sans:400,700|Merriweather:400,700&display=swap" rel="stylesheet">
@@ -62,7 +62,7 @@
                 
             </div>
             <div class="col-auto align-self-center mr-auto">
-                <a href="/">
+                <a href="/blog/blog/">
                     <h1 class="font-weight-bold name">
                         The Abstractionist
                     </h1>
@@ -71,14 +71,14 @@
                 <ul class="nav nav-primary">
                     
                         <li class="nav-item">
-                            <a class="text-uppercase nav-link text-blog" href="/blog/">
+                            <a class="text-uppercase nav-link text-blog" href="/blog/blog/">
                                 
                                 Blog
                             </a>
                         </li>
                     
                         <li class="nav-item">
-                            <a class="text-uppercase nav-link text-about" href="/about/">
+                            <a class="text-uppercase nav-link text-about" href="/blog/about/">
                                 
                                 About
                             </a>
@@ -140,23 +140,23 @@
                             <ul class="list-unstyled d-inline">
                                 
                                     <li class="d-inline middot">
-                                        <a href="/tags/go">go</a>
+                                        <a href="/blog/tags/go">go</a>
                                     </li>
                                 
                                     <li class="d-inline middot">
-                                        <a href="/tags/golang">golang</a>
+                                        <a href="/blog/tags/golang">golang</a>
                                     </li>
                                 
                                     <li class="d-inline middot">
-                                        <a href="/tags/templates">templates</a>
+                                        <a href="/blog/tags/templates">templates</a>
                                     </li>
                                 
                                     <li class="d-inline middot">
-                                        <a href="/tags/themes">themes</a>
+                                        <a href="/blog/tags/themes">themes</a>
                                     </li>
                                 
                                     <li class="d-inline middot">
-                                        <a href="/tags/development">development</a>
+                                        <a href="/blog/tags/development">development</a>
                                     </li>
                                 
                             </ul>
@@ -210,7 +210,7 @@ functions.</p>
 <p>Each Go template has a struct (object) made available to it. In hugo each
 template is passed either a page or a node struct depending on which type of
 page you are rendering. More details are available on the
-<a href="/layout/variables">variables</a> page.</p>
+<a href="/blog/layout/variables">variables</a> page.</p>
 <p>A variable is accessed by referencing the variable name.</p>
 <pre><code>&lt;title&gt;{{ .Title }}&lt;/title&gt;
 </code></pre>
@@ -221,7 +221,7 @@ page you are rendering. More details are available on the
 <h2 id="functions">Functions</h2>
 <p>Go template ship with a few functions which provide basic functionality. The Go
 template system also provides a mechanism for applications to extend the
-available functions with their own. <a href="/layout/functions">Hugo template
+available functions with their own. <a href="/blog/layout/functions">Hugo template
 functions</a> provide some additional functionality we believe
 are useful for building websites. Functions are called by using their name
 followed by the required parameters separated by spaces. Template
@@ -352,7 +352,7 @@ type (supported by your front matter/config format) and use them however
 you want to inside of your templates.</p>
 <h2 id="using-content-page-parameters">Using Content (page) Parameters</h2>
 <p>In each piece of content you can provide variables to be used by the
-templates. This happens in the <a href="/content/front-matter">front matter</a>.</p>
+templates. This happens in the <a href="/blog/content/front-matter">front matter</a>.</p>
 <p>An example of this is used in this documentation site. Most of the pages
 benefit from having the table of contents provided. Sometimes the TOC just
 doesn&rsquo;t make a lot of sense. We&rsquo;ve defined a variable in our front matter
@@ -452,7 +452,7 @@ so, such as in this example:</p>
                                 <div class="col-12 col-md-6">
                                     
                                         <div class="mx-0 mx-md-4 mt-4 text-left">
-                                            <a href="/blog/hugoisforlovers/">
+                                            <a href="/blog/blog/blog/hugoisforlovers/">
                                                 <span class="icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 477.175 477.175">
         <path d="M145.188,238.575l215.5-215.5c5.3-5.3,5.3-13.8,0-19.1s-13.8-5.3-19.1,0l-225.1,225.1c-5.3,5.3-5.3,13.8,0,19.1l225.1,225 c2.6,2.6,6.1,4,9.5,4s6.9-1.3,9.5-4c5.3-5.3,5.3-13.8,0-19.1L145.188,238.575z" />
@@ -467,7 +467,7 @@ so, such as in this example:</p>
                                 <div class="col-12 col-md-6">
                                     
                                         <div class="mx-0 mx-md-4 mt-4 text-right">
-                                            <a href="/blog/migrate-from-jekyll/">
+                                            <a href="/blog/blog/blog/migrate-from-jekyll/">
                                                 <span class="text">Migrate to Hugo from Jekyll</span>
                                                 <span class="icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 477.175 477.175">

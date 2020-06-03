@@ -1,5 +1,5 @@
 author = "The Abstractionist"
-baseurl = "/"
+baseurl = "/blog/"
 canonifyurls = true
 copyright = ""
 paginate = 5
