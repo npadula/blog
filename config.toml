@@ -1,13 +1,65 @@
-baseURL = "https://npadula.github.io/blog"
-title = "Nicolas Padula"
-publishDir = "docs"
+author = "The Abstractionist"
+baseurl = "/"
+canonifyurls = true
+copyright = ""
+paginate = 5
+title = "The Abstractionist"
 
-[permalinks]
-  posts = "/:title/"
+[params]
+copyright = ""
+copyrightUrl = ""
+description = ""
+faviconfile = ""
+latestpostcount = 5
+logofile = ""
+highlightjs = true
+highlightjslanguages = [ "bash", "css", "diff", "django", "javascript", "python", "yaml" ]
+toc = true
+posts_navigation = true
+progressively = true
+flattr = ""
+github = "npadula"
+gitlab = ""
+linkedin = ""
+telegram = ""
+twitter = ""
+mastodon_url = ""
+email = ""
 
-[markup.goldmark.renderer]
-  unsafe = true
+[[params.best_posts]]
+title = "Migrate to Hugo from Jekyll"
+url = "/blog/migrate-from-jekyll/"
 
-[markup.highlight]
-  style = "pygments"
-  tabWidth = 2
+[[params.best_posts]]
+title = "Test test"
+url = "/blog/t/"
+
+[[menu.primary]]
+identifier = "blog"
+name = "Blog"
+url = "/blog/"
+weight = 10
+
+[[menu.primary]]
+identifier = "about"
+name = "About"
+url = "/about/"
+weight = 20
+
+[[menu.secondary]]
+identifier = "patreon"
+name = "Become a patron"
+url = "https://www.patreon.com/bePatron?u=10637849"
+weight = 110
+
+[[menu.secondary]]
+identifier = "bmc"
+name = "Buy me a coffee"
+url = "https://www.buymeacoffee.com/gokmen"
+weight = 120
+
+#[[menu.footer]]
+#identifier = "tags"
+#name = "Tags"
+#url = "/tags/"
+#weight = 50

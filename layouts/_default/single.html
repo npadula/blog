@@ -1,16 +1,20 @@
 {{ define "main" }}
-<main class=single>
-	<header>
-		<div id=sitetitle>{{ .Site.Title }}:</div>
-		<h1>{{ .Title }}</h1>
-		{{ with .Page.Date }}<time>{{ .Format "2 Jan 2006" }}</time>{{ end }}
-		<div id=description>{{ .Param "description" }}</div>
-	</header>
-	<article class=single>
-		<aside id=toc>
-			{{ .TableOfContents }}
-		</aside>
-		<span id=dropcap></span>{{ .Content }}
-	</article>
-</main>
+    {{ partial "header" . }}
+
+    <div class="content">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-12 col-lg-10">
+                    <h1 class="mx-0 mx-md-4">
+                        {{ .Title }}
+                    </h1>
+                    <div class="markdown">
+                        {{ partial "content" . }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{ partial "footer" . }}
 {{ end }}
