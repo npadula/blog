@@ -3,17 +3,17 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://npadula.com/blog/blog/creating-a-new-theme/</loc>
+    <loc>https://npadula.com/blog/posts/creating-a-new-theme/</loc>
     <lastmod>2014-09-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://npadula.com/blog/blog/migrate-from-jekyll/</loc>
+    <loc>https://npadula.com/blog/posts/migrate-from-jekyll/</loc>
     <lastmod>2014-03-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://npadula.com/blog/blog/</loc>
+    <loc>https://npadula.com/blog/posts/</loc>
     <lastmod>2014-09-28T00:00:00+00:00</lastmod>
   </url>
   
@@ -28,7 +28,7 @@
   </url>
   
   <url>
-    <loc>https://npadula.com/blog/blog/goisforlovers/</loc>
+    <loc>https://npadula.com/blog/posts/goisforlovers/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
   </url>
   
@@ -48,7 +48,7 @@
   </url>
   
   <url>
-    <loc>https://npadula.com/blog/blog/hugoisforlovers/</loc>
+    <loc>https://npadula.com/blog/posts/hugoisforlovers/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
   </url>
   
