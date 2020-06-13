@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>nico.txt</title>
-    <link>https://npadula.com/blog/</link>
-    <description>Recent content on nico.txt</description>
+    <title>courses on nico.txt</title>
+    <link>https://npadula.com/blog/tags/courses/</link>
+    <description>Recent content in courses on nico.txt</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Fri, 12 Jun 2020 00:00:00 -0300</lastBuildDate>
     
-	<atom:link href="https://npadula.com/blog/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://npadula.com/blog/tags/courses/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,16 +18,6 @@
       <guid>https://npadula.com/blog/posts/moocs-done-doing-will-do/</guid>
       <description>A list of online courses that I did, am doing, or would like to do sometime. Courses listed here can follow a structured/formal approach (they can have excercises like courses on Pluralsight and Coursera) or just be a simple collection of Youtube lectures.
 Frontend React  (Done) Corey House&amp;rsquo;s React/Redux on Pluralsight. Very useful for understanding the Flux architecture and how Redux implements it. (Done) Daniel Stern&amp;rsquo;s Redux-Saga. Good complement to the Redux course, also a good resource to understand generators in ES6.</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>https://npadula.com/blog/about/</link>
-      <pubDate>Fri, 12 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://npadula.com/blog/about/</guid>
-      <description>My name is Nico and I&amp;rsquo;m a software developer living in Argentina. I am also a part-time Information Systems Engineering student. WHen I&amp;rsquo;m not working or studying, I typically still nerd out on technology and math, but also philosophy, psychology and other abstractions.
-This is certainly not the first iteration of having my own online space, but I sort of want to maintain it uncluttered. This is why I went for a fresh start.</description>
     </item>
     
   </channel>

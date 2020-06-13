@@ -3,88 +3,47 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://npadula.com/blog/posts/creating-a-new-theme/</loc>
-    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
+    <loc>https://npadula.com/blog/tags/courses/</loc>
+    <lastmod>2020-06-12T00:00:00-03:00</lastmod>
   </url>
   
   <url>
-    <loc>https://npadula.com/blog/posts/migrate-from-jekyll/</loc>
-    <lastmod>2014-03-10T00:00:00+00:00</lastmod>
+    <loc>https://npadula.com/blog/tags/education/</loc>
+    <lastmod>2020-06-12T00:00:00-03:00</lastmod>
   </url>
   
   <url>
-    <loc>https://npadula.com/blog/posts/</loc>
-    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
+    <loc>https://npadula.com/blog/tags/moocs/</loc>
+    <lastmod>2020-06-12T00:00:00-03:00</lastmod>
   </url>
   
   <url>
-    <loc>https://npadula.com/blog/about/</loc>
-    <lastmod>2014-04-09T00:00:00+00:00</lastmod>
+    <loc>https://npadula.com/blog/posts/moocs-done-doing-will-do/</loc>
+    <lastmod>2020-06-12T00:00:00-03:00</lastmod>
   </url>
   
   <url>
     <loc>https://npadula.com/blog/</loc>
-    <lastmod>2014-04-09T00:00:00+00:00</lastmod>
+    <lastmod>2020-06-12T00:00:00-03:00</lastmod>
   </url>
   
   <url>
-    <loc>https://npadula.com/blog/posts/goisforlovers/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://npadula.com/blog/categories/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://npadula.com/blog/categories/development/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://npadula.com/blog/tags/development/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://npadula.com/blog/posts/hugoisforlovers/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://npadula.com/blog/tags/go/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://npadula.com/blog/tags/golang/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://npadula.com/blog/categories/golang/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://npadula.com/blog/tags/hugo/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
+    <loc>https://npadula.com/blog/posts/</loc>
+    <lastmod>2020-06-12T00:00:00-03:00</lastmod>
   </url>
   
   <url>
     <loc>https://npadula.com/blog/tags/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
+    <lastmod>2020-06-12T00:00:00-03:00</lastmod>
   </url>
   
   <url>
-    <loc>https://npadula.com/blog/tags/templates/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
+    <loc>https://npadula.com/blog/about/</loc>
+    <lastmod>2020-06-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://npadula.com/blog/tags/themes/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
+    <loc>https://npadula.com/blog/categories/</loc>
   </url>
   
 </urlset>

@@ -4,12 +4,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Creating a New Theme - The Abstractionist</title>
+    <title>Creating a New Theme - nico.txt</title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="referrer" content="no-referrer">
     <meta name="description" content="">
-    <meta property="og:site_name" content="The Abstractionist" />
+    <meta property="og:site_name" content="nico.txt" />
     <meta property="og:locale" content="nn_NO" />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://npadula.com/blog/posts/creating-a-new-theme/" />
@@ -43,7 +43,7 @@
     <link rel="shortcut icon"
           href="https://npadula.com/blog/img/favicon.ico">
 
-    <link href='' rel="alternate" type="application/rss+xml" title="The Abstractionist" />
+    <link href='' rel="alternate" type="application/rss+xml" title="nico.txt" />
     <link href="https://fonts.googleapis.com/css?family=Fira+Code|Merriweather+Sans:400,700|Merriweather:400,700&display=swap" rel="stylesheet">
 </head>
 
@@ -64,16 +64,16 @@
             <div class="col-auto align-self-center mr-auto">
                 <a href="https://npadula.com/blog/">
                     <h1 class="font-weight-bold name">
-                        The Abstractionist
+                        nico.txt
                     </h1>
                 </a>
 
                 <ul class="nav nav-primary">
                     
                         <li class="nav-item">
-                            <a class="text-uppercase nav-link text-blog" href="https://npadula.com/blog/blog/">
+                            <a class="text-uppercase nav-link text-archive" href="https://npadula.com/blog/posts/">
                                 
-                                Blog
+                                Archive
                             </a>
                         </li>
                     
@@ -627,7 +627,7 @@ $
 :wq
 
 $
-</code></pre><p>Hugo uses the Go template engine. That engine scans the template files for commands which are enclosed between &ldquo;{{&rdquo; and &ldquo;}}&quot;. In our template, the commands are:</p>
+</code></pre><p>Hugo uses the Go template engine. That engine scans the template files for commands which are enclosed between &ldquo;{{&rdquo; and &ldquo;}}&rdquo;. In our template, the commands are:</p>
 <ol>
 <li>range</li>
 <li>.Title</li>
@@ -815,7 +815,7 @@ i'm speechless
 -rw-rw-r--  1 mdhender  staff   358 Sep 27 15:08 public/post/first-post/index.html
 -rw-rw-r--  1 mdhender  staff     0 Sep 27 15:08 public/post/index.html
 -rw-rw-r--  1 mdhender  staff   342 Sep 27 15:08 public/post/second-post/index.html
-</code></pre><p>Notice that the page wasn&rsquo;t created at the top level. It was created in a sub-directory named &lsquo;about-time/'. That name came from our slug. Hugo will use the slug to name the generated content. It&rsquo;s a reasonable default, by the way, but we can learn a few things by fighting it for this file.</p>
+</code></pre><p>Notice that the page wasn&rsquo;t created at the top level. It was created in a sub-directory named &lsquo;about-time/&rsquo;. That name came from our slug. Hugo will use the slug to name the generated content. It&rsquo;s a reasonable default, by the way, but we can learn a few things by fighting it for this file.</p>
 <p>One other thing. Take a look at the home page.</p>
 <pre><code>$ cat public/index.html
 &lt;!DOCTYPE html&gt;
@@ -1077,6 +1077,13 @@ $ vi themes/zafta/layouts/_default/single.html
         <div class="row justify-content-center">
             <div class="col-sm-12 col-md-6 col-lg-5">
                 <div class="mx-0 mx-md-4 mb-2 text-center text-md-left">
+                    
+                        <div>
+                            <a class="mx-1 mr-md-2 ml-md-0  text-tags" href="https://npadula.com/blog/tags/">
+                                
+                                Tags
+                            </a>
+                        </div>
                     
 
                     

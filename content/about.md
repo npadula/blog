@@ -1,18 +1,11 @@
 +++
-title = "About Hugo"
-date = "2014-04-09"
+title = "About"
+date = "2020-06-12"
 menu = "main"
 +++
 
-Hugo is the **world’s fastest framework for building websites**. It is written in Go.
+My name is Nico and I'm a software developer living in Argentina. I am also a part-time Information Systems Engineering student. WHen I'm not working or studying, I typically still nerd out on technology and math, but also philosophy, psychology and other abstractions. 
 
-It makes use of a variety of open source projects including:
+This is certainly not the first iteration of having my own online space, but I sort of want to maintain it uncluttered. This is why I went for a fresh start. 
 
-* https://github.com/russross/blackfriday
-* https://github.com/alecthomas/chroma
-* https://github.com/muesli/smartcrop
-* https://github.com/spf13/cobra
-* https://github.com/spf13/viper
-
-Learn more and contribute on [GitHub](https://github.com/gohugoio).
-
+I started this website with Hopefully I'll be sharing some of the stuff I learn, and my own thoughts and projects too.

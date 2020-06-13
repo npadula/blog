@@ -1,9 +1,10 @@
-author = "The Abstractionist"
+author = "Nico"
 baseurl = "https://npadula.com/blog/"
 canonifyurls = true
 copyright = ""
 paginate = 5
-title = "The Abstractionist"
+title = "nico.txt"
+publishDir = "docs"
 
 [params]
 copyright = ""
@@ -27,17 +28,17 @@ mastodon_url = ""
 email = ""
 
 [[params.best_posts]]
-title = "Migrate to Hugo from Jekyll"
-url = "/blog/migrate-from-jekyll/"
+title = "MOOCs: Done, Doing, Will Do"
+url = "/posts/moocs-done-doing-will-do/"
 
-[[params.best_posts]]
-title = "Test test"
-url = "/blog/t/"
+# [[params.best_posts]]
+# title = "Test test"
+# url = "/blog/t/"
 
 [[menu.primary]]
-identifier = "blog"
-name = "Blog"
-url = "/blog/"
+identifier = "archive"
+name = "Archive"
+url = "/posts/"
 weight = 10
 
 [[menu.primary]]
@@ -58,8 +59,8 @@ name = "Buy me a coffee"
 url = "https://www.buymeacoffee.com/gokmen"
 weight = 120
 
-#[[menu.footer]]
-#identifier = "tags"
-#name = "Tags"
-#url = "/tags/"
-#weight = 50
+[[menu.footer]]
+identifier = "tags"
+name = "Tags"
+url = "/tags/"
+weight = 50

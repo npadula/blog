@@ -1,9 +1,9 @@
 +++
-title = "The Abstractionist"
+title = "nico.txt"
 menu = "main"
 +++
 
-As a programmer, I deal with abstractions for work on a daily basis. As an obsessive abstractionist, I also deal with them the rest of the day. Here is a collection of ramblings about said abstractions (and some other things too). Sometimes in English, sometimes in Spanish.
+As a [programmer](https://npadula.com), I deal with abstractions for work on a daily basis. As an overall nerd, I also deal with them for fun during the rest of the day. Here is a collection of thoughts on those subjects and some others. Sometimes in Spanish, sometimes in English.
 
 ## Things you can find here
 
