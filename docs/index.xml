@@ -5,10 +5,20 @@
     <link>https://npadula.com/blog/</link>
     <description>Recent content on nico.txt</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 12 Jun 2020 00:00:00 -0300</lastBuildDate>
+    <lastBuildDate>Sat, 08 Aug 2020 00:00:00 -0300</lastBuildDate>
     
 	<atom:link href="https://npadula.com/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Foundations &amp; Intuition: Programming and Music</title>
+      <link>https://npadula.com/blog/posts/foundations-intuition-programming-music/</link>
+      <pubDate>Sat, 08 Aug 2020 00:00:00 -0300</pubDate>
+      
+      <guid>https://npadula.com/blog/posts/foundations-intuition-programming-music/</guid>
+      <description>Fair warning: Probably none of what I&amp;rsquo;m going to say below is new or original.
+Music and Missing Fundamentals As a teenager, with the primary goal of becoming cool in mind, I decided to learn how to play the bass. I bought a bass, downloaded For Whom the Bell Tolls&amp;rsquo; tabs, and started practicing. Fast forward a couple of years and I could sort-of-play more interesting songs, but, eventually, while learning tabs and practicing technique was fun, I started noticing limitations, which eventually (among other factors), led me to stop playing.</description>
+    </item>
     
     <item>
       <title>MOOCs: Done, Doing, Will Do</title>
@@ -26,7 +36,7 @@ Frontend React  (Done) Corey House&amp;rsquo;s React/Redux on Pluralsight. Very 
       <pubDate>Fri, 12 Jun 2020 00:00:00 +0000</pubDate>
       
       <guid>https://npadula.com/blog/about/</guid>
-      <description>My name is Nico and I&amp;rsquo;m a software developer living in Argentina. I am also a part-time Information Systems Engineering student. WHen I&amp;rsquo;m not working or studying, I typically still nerd out on technology and math, but also philosophy, psychology and other abstractions.
+      <description>My name is Nico and I&amp;rsquo;m a software developer living in Argentina. I am also a part-time Information Systems Engineering student. When I&amp;rsquo;m not working or studying, I still nerd out on technology and math, but also philosophy, psychology and other abstractions.
 This is certainly not the first iteration of having my own online space, but I sort of want to maintain it uncluttered. This is why I went for a fresh start.</description>
     </item>
     

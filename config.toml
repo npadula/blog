@@ -28,8 +28,14 @@ mastodon_url = ""
 email = ""
 
 [[params.best_posts]]
+title = "Foundations & Intuition: Programming and Music"
+url = "/posts/foundations-intuition-programming-music/"
+
+[[params.best_posts]]
 title = "MOOCs: Done, Doing, Will Do"
 url = "/posts/moocs-done-doing-will-do/"
+
+
 
 # [[params.best_posts]]
 # title = "Test test"
@@ -47,17 +53,18 @@ name = "About"
 url = "/about/"
 weight = 20
 
-[[menu.secondary]]
-identifier = "patreon"
-name = "Become a patron"
-url = "https://www.patreon.com/bePatron?u=10637849"
-weight = 110
+# [[menu.primary]]
+# identifier = "patreon"
+# name = "CV"
+# url = "https://npadula.com"
+# weight = 100
 
 [[menu.secondary]]
-identifier = "bmc"
-name = "Buy me a coffee"
-url = "https://www.buymeacoffee.com/gokmen"
-weight = 120
+identifier = "patreon"
+name = "CV"
+url = "https://npadula.com"
+weight = 200
+
 
 [[menu.footer]]
 identifier = "tags"

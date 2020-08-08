@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on nico.txt</title>
-    <link>https://npadula.com/blog/posts/</link>
-    <description>Recent content in Posts on nico.txt</description>
+    <title>thinking on nico.txt</title>
+    <link>https://npadula.com/blog/tags/thinking/</link>
+    <description>Recent content in thinking on nico.txt</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sat, 08 Aug 2020 00:00:00 -0300</lastBuildDate>
     
-	<atom:link href="https://npadula.com/blog/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://npadula.com/blog/tags/thinking/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,16 +18,6 @@
       <guid>https://npadula.com/blog/posts/foundations-intuition-programming-music/</guid>
       <description>Fair warning: Probably none of what I&amp;rsquo;m going to say below is new or original.
 Music and Missing Fundamentals As a teenager, with the primary goal of becoming cool in mind, I decided to learn how to play the bass. I bought a bass, downloaded For Whom the Bell Tolls&amp;rsquo; tabs, and started practicing. Fast forward a couple of years and I could sort-of-play more interesting songs, but, eventually, while learning tabs and practicing technique was fun, I started noticing limitations, which eventually (among other factors), led me to stop playing.</description>
-    </item>
-    
-    <item>
-      <title>MOOCs: Done, Doing, Will Do</title>
-      <link>https://npadula.com/blog/posts/moocs-done-doing-will-do/</link>
-      <pubDate>Fri, 12 Jun 2020 00:00:00 -0300</pubDate>
-      
-      <guid>https://npadula.com/blog/posts/moocs-done-doing-will-do/</guid>
-      <description>A list of online courses that I did, am doing, or would like to do sometime. Courses listed here can follow a structured/formal approach (they can have excercises like courses on Pluralsight and Coursera) or just be a simple collection of Youtube lectures.
-Frontend React  (Done) Corey House&amp;rsquo;s React/Redux on Pluralsight. Very useful for understanding the Flux architecture and how Redux implements it. (Done) Daniel Stern&amp;rsquo;s Redux-Saga. Good complement to the Redux course, also a good resource to understand generators in ES6.</description>
     </item>
     
   </channel>
