@@ -1,5 +1,5 @@
 +++
-date = 2020-08-08
+date = 2020-08-11
 menu =  "main"
 title = "Visiting C#: Different ways of implementing the Visitor Pattern"
 tags = [
