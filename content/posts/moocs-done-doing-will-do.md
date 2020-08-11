@@ -25,12 +25,15 @@ A list of online courses that I did, am doing, or would like to do sometime. Cou
 
 - _(Dropped out)_ Andrew Ng's Machine Learning (Coursera). Pretty good, intuitive course, I dropped out after the neural networks unit because it felt a little bit shallow, and I wanted some more details on the underlying math.
 - _(Done)_ [Yaser Abu-Mostafa's Learning From Data](https://work.caltech.edu/telecourse). One of the best courses I've ever watched both online and IRL. The lectures are engaging and provide tremendous insight on the fundamental learning problems. Highly recommended.
-- _(Dropped out)_ [Stanford CS229](https://www.youtube.com/playlist?list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU). Started this one after Lelarning From Data. Since it is Stanford I thought it would be a more deep version of Andrew Ng's Coursera MOOC, but I was severely dissappointed. I feel not much math insight is gained from the lectures, and classes are kind of boring. The lecture notes are handy though.
+- _(Dropped out)_ [Stanford CS229](https://www.youtube.com/playlist?list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU). Started this one after Learning From Data. Since it is Stanford I thought it would be a more deep version of Andrew Ng's Coursera MOOC, but I was severely dissappointed. I feel not much math insight is gained from the lectures, and classes are kind of boring. The lecture notes are handy though.
 - [NYU Deep Learning](https://www.youtube.com/watch?v=0bMe_vCZo30&list=PLLHTzKZzVU9eaEyErdV26ikyolxOsz6mq). Focused on Deep Learning, so it's more narrow than CS229. Seems to have a lot practical lessons so that is cool.
 - [fast.ai](http://fast.ai) has a lot of stuff, more practiced oriented.
 
 ## Software Architecture / System Design
 - _(Done)_ [Pluralsight's Domain-Driven Design Path.](https://app.pluralsight.com/paths/skill/domain-driven-design). Amazing series of courses, it covers many aspects like Clean Architecture, theoretical DDD concepts, implementation of DDD to application design and refactoring, combination with CQRS and Event Sourcing, and some other patterns. Recently they added [Vladimir Khorikov's latest EF Core course](https://app.pluralsight.com/library/courses/ddd-ef-core-preserving-encapsulation/table-of-contents), which seems really promising too.
+- _(Done)_ [Tactical Design Patterns in .NET: Control Flow](https://app.pluralsight.com/library/courses/tactical-design-patterns-dot-net-control-flow/table-of-contents). Good but I personally did not learn anything new.
+- [Tactical Design Patterns in .NET: Creating Objects](https://app.pluralsight.com/library/courses/tactical-design-patternsdot-net/table-of-contents)
+- [Tactical Design Patterns in .NET: Managing Responsibilities](https://app.pluralsight.com/library/courses/tactical-design-patterns-dotnet-managing-responsibilities/table-of-contents)
 
 ## Distributed Systems
 There are many in this category that I want to do:
