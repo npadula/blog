@@ -5,10 +5,55 @@
     <link>https://npadula.com/blog/tags/</link>
     <description>Recent content in Tags on nico.txt</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 08 Aug 2020 00:00:00 -0300</lastBuildDate>
+    <lastBuildDate>Tue, 11 Aug 2020 00:00:00 -0300</lastBuildDate>
     
 	<atom:link href="https://npadula.com/blog/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>csharp</title>
+      <link>https://npadula.com/blog/tags/csharp/</link>
+      <pubDate>Tue, 11 Aug 2020 00:00:00 -0300</pubDate>
+      
+      <guid>https://npadula.com/blog/tags/csharp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>design</title>
+      <link>https://npadula.com/blog/tags/design/</link>
+      <pubDate>Tue, 11 Aug 2020 00:00:00 -0300</pubDate>
+      
+      <guid>https://npadula.com/blog/tags/design/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>patterns</title>
+      <link>https://npadula.com/blog/tags/patterns/</link>
+      <pubDate>Tue, 11 Aug 2020 00:00:00 -0300</pubDate>
+      
+      <guid>https://npadula.com/blog/tags/patterns/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>programming</title>
+      <link>https://npadula.com/blog/tags/programming/</link>
+      <pubDate>Tue, 11 Aug 2020 00:00:00 -0300</pubDate>
+      
+      <guid>https://npadula.com/blog/tags/programming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>visitor</title>
+      <link>https://npadula.com/blog/tags/visitor/</link>
+      <pubDate>Tue, 11 Aug 2020 00:00:00 -0300</pubDate>
+      
+      <guid>https://npadula.com/blog/tags/visitor/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>cognition</title>
@@ -20,47 +65,11 @@
     </item>
     
     <item>
-      <title>csharp</title>
-      <link>https://npadula.com/blog/tags/csharp/</link>
-      <pubDate>Sat, 08 Aug 2020 00:00:00 -0300</pubDate>
-      
-      <guid>https://npadula.com/blog/tags/csharp/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>design</title>
-      <link>https://npadula.com/blog/tags/design/</link>
-      <pubDate>Sat, 08 Aug 2020 00:00:00 -0300</pubDate>
-      
-      <guid>https://npadula.com/blog/tags/design/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>music</title>
       <link>https://npadula.com/blog/tags/music/</link>
       <pubDate>Sat, 08 Aug 2020 00:00:00 -0300</pubDate>
       
       <guid>https://npadula.com/blog/tags/music/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>patterns</title>
-      <link>https://npadula.com/blog/tags/patterns/</link>
-      <pubDate>Sat, 08 Aug 2020 00:00:00 -0300</pubDate>
-      
-      <guid>https://npadula.com/blog/tags/patterns/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>programming</title>
-      <link>https://npadula.com/blog/tags/programming/</link>
-      <pubDate>Sat, 08 Aug 2020 00:00:00 -0300</pubDate>
-      
-      <guid>https://npadula.com/blog/tags/programming/</guid>
       <description></description>
     </item>
     
@@ -79,15 +88,6 @@
       <pubDate>Sat, 08 Aug 2020 00:00:00 -0300</pubDate>
       
       <guid>https://npadula.com/blog/tags/thinking/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>visitor</title>
-      <link>https://npadula.com/blog/tags/visitor/</link>
-      <pubDate>Sat, 08 Aug 2020 00:00:00 -0300</pubDate>
-      
-      <guid>https://npadula.com/blog/tags/visitor/</guid>
       <description></description>
     </item>
     

@@ -5,7 +5,7 @@
     <link>https://npadula.com/blog/tags/csharp/</link>
     <description>Recent content in csharp on nico.txt</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 08 Aug 2020 00:00:00 -0300</lastBuildDate>
+    <lastBuildDate>Tue, 11 Aug 2020 00:00:00 -0300</lastBuildDate>
     
 	<atom:link href="https://npadula.com/blog/tags/csharp/index.xml" rel="self" type="application/rss+xml" />
     
@@ -13,7 +13,7 @@
     <item>
       <title>Visiting C#: Different ways of implementing the Visitor Pattern</title>
       <link>https://npadula.com/blog/posts/visiting-csharp-different-ways-implementing-visitor-pattern/</link>
-      <pubDate>Sat, 08 Aug 2020 00:00:00 -0300</pubDate>
+      <pubDate>Tue, 11 Aug 2020 00:00:00 -0300</pubDate>
       
       <guid>https://npadula.com/blog/posts/visiting-csharp-different-ways-implementing-visitor-pattern/</guid>
       <description>The purpose of the Visitor pattern is to add new behavior to classes without modifying them (too much). By using Visitor, we can create new behavior that acts upon certain entities, without placing that behavior on the entities themselves.
