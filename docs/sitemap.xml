@@ -8,6 +8,16 @@
   </url>
   
   <url>
+    <loc>https://npadula.com/blog/tags/csharp/</loc>
+    <lastmod>2020-08-08T00:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://npadula.com/blog/tags/design/</loc>
+    <lastmod>2020-08-08T00:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://npadula.com/blog/posts/foundations-intuition-programming-music/</loc>
     <lastmod>2020-08-08T00:00:00-03:00</lastmod>
   </url>
@@ -19,6 +29,11 @@
   
   <url>
     <loc>https://npadula.com/blog/</loc>
+    <lastmod>2020-08-08T00:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://npadula.com/blog/tags/patterns/</loc>
     <lastmod>2020-08-08T00:00:00-03:00</lastmod>
   </url>
   
@@ -44,6 +59,16 @@
   
   <url>
     <loc>https://npadula.com/blog/tags/thinking/</loc>
+    <lastmod>2020-08-08T00:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://npadula.com/blog/posts/visiting-csharp-different-ways-implementing-visitor-pattern/</loc>
+    <lastmod>2020-08-08T00:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://npadula.com/blog/tags/visitor/</loc>
     <lastmod>2020-08-08T00:00:00-03:00</lastmod>
   </url>
   

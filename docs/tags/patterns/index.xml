@@ -1,24 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>programming on nico.txt</title>
-    <link>https://npadula.com/blog/tags/programming/</link>
-    <description>Recent content in programming on nico.txt</description>
+    <title>patterns on nico.txt</title>
+    <link>https://npadula.com/blog/tags/patterns/</link>
+    <description>Recent content in patterns on nico.txt</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sat, 08 Aug 2020 00:00:00 -0300</lastBuildDate>
     
-	<atom:link href="https://npadula.com/blog/tags/programming/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://npadula.com/blog/tags/patterns/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Foundations &amp; Intuition: Programming and Music</title>
-      <link>https://npadula.com/blog/posts/foundations-intuition-programming-music/</link>
-      <pubDate>Sat, 08 Aug 2020 00:00:00 -0300</pubDate>
-      
-      <guid>https://npadula.com/blog/posts/foundations-intuition-programming-music/</guid>
-      <description>Fair warning: Probably none of what I&amp;rsquo;m going to say below is new or original.
-Music and Missing Fundamentals As a teenager, with the primary goal of becoming cool in mind, I decided to learn how to play the bass. I bought a bass, downloaded For Whom the Bell Tolls&amp;rsquo; tabs, and started practicing. Fast forward a couple of years and I could sort-of-play more interesting songs, but, eventually, while learning tabs and practicing technique was fun, I started noticing limitations, which eventually (among other factors), led me to stop playing.</description>
-    </item>
     
     <item>
       <title>Visiting C#: Different ways of implementing the Visitor Pattern</title>

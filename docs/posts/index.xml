@@ -21,6 +21,16 @@ Music and Missing Fundamentals As a teenager, with the primary goal of becoming 
     </item>
     
     <item>
+      <title>Visiting C#: Different ways of implementing the Visitor Pattern</title>
+      <link>https://npadula.com/blog/posts/visiting-csharp-different-ways-implementing-visitor-pattern/</link>
+      <pubDate>Sat, 08 Aug 2020 00:00:00 -0300</pubDate>
+      
+      <guid>https://npadula.com/blog/posts/visiting-csharp-different-ways-implementing-visitor-pattern/</guid>
+      <description>The purpose of the Visitor pattern is to add new behavior to classes without modifying them (too much). By using Visitor, we can create new behavior that acts upon certain entities, without placing that behavior on the entities themselves.
+For example, consider serialization: what is better? entity.serialize() or serializer.serialize(entity) ? I&amp;rsquo;d say that the second option is preferable because we may want to implement a complex serialization process with several dependencies that don&amp;rsquo;t really relate to the entity itself.</description>
+    </item>
+    
+    <item>
       <title>MOOCs: Done, Doing, Will Do</title>
       <link>https://npadula.com/blog/posts/moocs-done-doing-will-do/</link>
       <pubDate>Fri, 12 Jun 2020 00:00:00 -0300</pubDate>
