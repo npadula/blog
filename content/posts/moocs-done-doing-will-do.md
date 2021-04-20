@@ -6,7 +6,8 @@ title = "MOOCs: Done, Doing, Will Do"
 tags = [
     "moocs",
     "education",
-    "courses"
+    "courses",
+	"learning"
 ]
 +++
 
@@ -34,13 +35,16 @@ A list of online courses that I did, am doing, or would like to do sometime. Cou
 - _(Done)_ [Tactical Design Patterns in .NET: Control Flow](https://app.pluralsight.com/library/courses/tactical-design-patterns-dot-net-control-flow/table-of-contents). Good but I personally did not learn anything new.
 - [Tactical Design Patterns in .NET: Creating Objects](https://app.pluralsight.com/library/courses/tactical-design-patternsdot-net/table-of-contents)
 - [Tactical Design Patterns in .NET: Managing Responsibilities](https://app.pluralsight.com/library/courses/tactical-design-patterns-dotnet-managing-responsibilities/table-of-contents)
+- _(Done)_ [Searching and Analyzing Data With Elasticsearch](https://www.pluralsight.com/courses/elasticsearch-analyzing-data) and [Designing Schema for Elasticsearch](https://app.pluralsight.com/library/courses/elasticsearch-designing-schema/table-of-contents). Between the two I was able to get a comprehensive overview of the fundamentals concepts and methodologies to leverage Elasticsearch.
+- _(Done)_ [Cassandra for Developers](https://app.pluralsight.com/library/courses/cassandra-developers/table-of-contents). Very comprehensive introduction to Cassandra, it explains everything that makes Cassandra "weird" or different from other databse engines.
 
 ## Distributed Systems
 There are many in this category that I want to do:
 
-- [MIT 6.824](https://www.youtube.com/playlist?list=PLrw6a1wE39_tb2fErI4-WkMbsvGQk9_UB) is **entirely available for free**, with [auto-grading scripts](https://pdos.csail.mit.edu/6.824/index.html) and everything!
+- _(Done)_ [Ivan Mushketyk's Ethereum Development course](https://app.pluralsight.com/library/courses/ethereum-blockchain-developing-applications/table-of-contents). It's a very good course because it provides a good, broad picture of how blockchain architectures work, as well as a more in depth look of how to implement DApps with Solidity.
+- _(Doing, ~10%)_ [MIT 6.824](https://www.youtube.com/playlist?list=PLrw6a1wE39_tb2fErI4-WkMbsvGQk9_UB) is **entirely available for free**, with [auto-grading scripts](https://pdos.csail.mit.edu/6.824/index.html) and everything! Seems to be a very practical course, oriented towards case studies, while learning theoretical concepts on the side.
 - [Lambda Architecture](https://app.pluralsight.com/library/courses/spark-kafka-cassandra-applying-lambda-architecture/table-of-contents) seems to have a pretty good overview of a widely used big data architecture.
-- _(Doing, ~80%)_ [Scaling Applications with Microservices, MassTransit and RabbitMQ](https://app.pluralsight.com/library/courses/masstransit-rabbitmq-scaling-microservices/table-of-contents) is more about queues and events than anything else, but the last units do seem to provide explanations of common patterns.
+- _(Done)_ [Scaling Applications with Microservices, MassTransit and RabbitMQ](https://app.pluralsight.com/library/courses/masstransit-rabbitmq-scaling-microservices/table-of-contents) is more about queues and events than anything else, but the last units do provide explanations of some common patterns.
 - [Microservices Architectural Design Patterns Playbook](https://app.pluralsight.com/library/courses/microservices-architectural-design-patterns-playbook/table-of-contents) seems to be more of a reference than anything, but it may be worth a shot.
 
 
@@ -51,9 +55,6 @@ There are many in this category that I want to do:
 - _(Done)_ [Applying Functional Principles in C#](https://app.pluralsight.com/library/courses/csharp-applying-functional-principles/table-of-contents). Good intro to useful patterns in C#. 
 
 - [Functional Programming in Scala](https://www.coursera.org/specializations/scala). Taught by the Scala creator himself. Appears to have several practical application lectures. Seems really promising.
-
-## Blockchain
-- _(Done)_ [Ivan Mushketyk's Ethereum Development course](https://app.pluralsight.com/library/courses/ethereum-blockchain-developing-applications/table-of-contents). It's a very good course because it provides a good, broad picture of how blockchain architectures work, as well as a more in depth look of how to implement DApps with Solidity.
 
 ## Mathematics
 - [Measure Theory](https://www.youtube.com/playlist?list=PLBh2i93oe2qvMVqAzsX1Kuv6-4fjazZ8j). No reason for this, just looks pretty cool.
