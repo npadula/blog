@@ -1,0 +1,298 @@
+<!doctype html><html lang><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><title>Visiting C#: Different ways of implementing the Visitor Pattern - nico.txt</title><meta name=HandheldFriendly content="True"><meta name=MobileOptimized content="320"><meta name=referrer content="no-referrer"><meta name=description content><meta property="og:site_name" content="nico.txt"><meta property="og:locale" content="nn_NO"><meta property="og:type" content="article"><meta property="og:url" content="https://npadula.com/blog/posts/visiting-csharp-different-ways-implementing-visitor-pattern/"><meta property="og:title" content="Visiting C#: Different ways of implementing the Visitor Pattern"><meta property="og:image" content="https://npadula.com/blog/"><meta property="og:description" content><meta property="twitter:title" content="Visiting C#: Different ways of implementing the Visitor Pattern"><meta property="twitter:image" content="https://npadula.com/blog/"><meta property="twitter:card" content="summary"><meta property="twitter:description" content><link rel=canonical href=https://npadula.com/blog/posts/visiting-csharp-different-ways-implementing-visitor-pattern/><link rel=stylesheet href=https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css integrity=sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh crossorigin=anonymous><link rel=stylesheet href=https://npadula.com/blog/css/main.css><link rel=stylesheet href=https://npadula.com/blog/css/highlight.css><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/progressively/1.2.5/progressively.min.css integrity="sha256-xbqLYBMsjpuCihs+3Fgp/MFMtPdo2SWKoOjEWOqR4X0=" crossorigin=anonymous><link rel="shortcut icon" href=https://npadula.com/blog/img/favicon.ico><link href rel=alternate type=application/rss+xml title=nico.txt><link href="https://fonts.googleapis.com/css?family=Fira+Code|Merriweather+Sans:400,700|Merriweather:400,700&display=swap" rel=stylesheet></head><body><div class="my-4 my-md-5 header"><div class=container><div class=row><div class="col-auto d-none d-md-block"></div><div class="col-auto align-self-center mr-auto"><a href=https://npadula.com/blog/><h1 class="font-weight-bold name">nico.txt</h1></a><ul class="nav nav-primary"><li class=nav-item><a class="text-uppercase nav-link text-archive" href=https://npadula.com/blog/posts/>Archive</a></li><li class=nav-item><a class="text-uppercase nav-link text-about" href=https://npadula.com/blog/about/>About</a></li></ul><ul class="nav nav-secondary"><li class=nav-item><a class="text-uppercase font-weight-bold nav-link text-patreon" href=https://npadula.com>CV</a></li></ul></div></div></div></div><div class=content><div class=container><div class="row justify-content-center"><div class="col-md-9 col-lg-9"><h1 class="mx-0 mx-md-4">Visiting C#: Different ways of implementing the Visitor Pattern</h1><div class="mb-4 mb-md-5 meta"><span class=date title="Tue Aug 11 2020 00:00:00 UTC">August 11, 2020</span>
+<span class="reading-time middot">8 minutes</span><div class="d-none d-md-inline tags"><ul class="list-unstyled d-inline"><li class="d-inline middot"><a href=https://npadula.com/blog/tags/programming>programming</a></li><li class="d-inline middot"><a href=https://npadula.com/blog/tags/design>design</a></li><li class="d-inline middot"><a href=https://npadula.com/blog/tags/patterns>patterns</a></li><li class="d-inline middot"><a href=https://npadula.com/blog/tags/visitor>visitor</a></li><li class="d-inline middot"><a href=https://npadula.com/blog/tags/csharp>csharp</a></li></ul></div><div class="d-none d-md-inline tags"><ul class="list-unstyled d-inline"></ul></div></div><div class=markdown><p>The purpose of the Visitor pattern is to add new behavior to classes without modifying them (too much). By using Visitor, we can create new behavior that acts upon certain entities, without placing that behavior on the entities themselves.</p><p>For example, consider serialization: what is better? <code>entity.serialize()</code> or <code>serializer.serialize(entity)</code> ? I&rsquo;d say that the second option is preferable because we may want to implement a complex serialization process with several dependencies that don&rsquo;t really relate to the entity itself. Let&rsquo;s see how can we achieve this in C#.</p><h2 id=extension-methods>Extension Methods</h2><p>Probably the most idiomatic way we have to add behavior to 3rd party classes in C# is using extension methods. Extension methods are static methods defined in a static class, which the compiler recognizes (because of the <code>this</code> in the method signature) to be used as if it were a method of the 3rd party class we&rsquo;re extending.</p><p>In code this looks like this:</p><pre><code>void Main()
+{
+	var x = new MyClass();
+	x.DoWork();
+}
+
+public class MyClass {}
+
+public static class Extensions {
+    public static void DoWork(this MyClass obj){
+        Console.WriteLine(&quot;Hello from extension&quot;);
+    }
+}
+</code></pre><p>Thanks to C#&rsquo;s syntactic sugar, we can use the DoWork method as if it were defined in MyClass itself. This proves a really convenient way of extending classes without modifying a single line of code of them.</p><p>While convenient, this approach has a few drawbacks:</p><ul><li>It relies on static classes and methods, which can be anti-ergonomic in several scenarios (dependencyy instantiation, testing).</li><li><strong>it&rsquo;s not a real visitor implementation</strong></li></ul><p>It&rsquo;s not?</p><p>That&rsquo;s right, it&rsquo;s not, we can see why if we extend the previous example a bit more:</p><pre><code>void Main()
+{
+	IBlah x = new MyClass();
+	x.DoWork();
+}
+
+public class MyBaseClass {}
+
+public class MyClass : MyBaseClass, IBlah {}
+
+public interface IBlah {}
+
+
+public static class Extensions {
+	public static void DoWork(this MyBaseClass baseObj){
+		Console.WriteLine(&quot;DoWork for BASE&quot;);
+	}
+	public static void DoWork(this IBlah blah){
+		Console.WriteLine(&quot;DoWork for IBlah&quot;);
+	}
+	
+	public static void DoWork(this MyClass blah){
+		Console.WriteLine(&quot;DoWork for MyClass&quot;);
+	}
+}
+</code></pre><p>This outputs: <code>DoWork for IBlah</code>.</p><p>The problem with this is that we do not benefit of polymorphism. The code in the Main method would be similar to how we would typically invoke a Visitor implementation, we call it with a given interface or class, and expect both the concrete type specific behavior and algorithm-specific behavior to be applied.</p><p>If we were to stick with this approach, either our main code or our extension methods would end up full of <code>if(x is IBlah){...}</code> which is more than undesirable.</p><p>To solve this, we can use the traditional Visitor Pattern, as defined by the GoF.</p><h2 id=traditional-visitor-pattern>Traditional Visitor Pattern</h2><p>The classic Visitor pattern is based in two things: class hierarchy traversal and <strong>double dispatch</strong>. Double dispatch is the technique that will allow us to achieve the two axes variation that we want.</p><p>To achieve double dispatch, the pattern relies on two basic structures, the <strong>Visitor</strong> which is the class that contains the logic we want to add and the <strong>Visitable</strong> which represents our entity. Visitable is sometimes called component, or element. In UML, this is represented with the following diagrams:</p><p><img src=https://upload.wikimedia.org/wikipedia/commons/0/00/W3sDesign_Visitor_Design_Pattern_UML.jpg alt="Traditional GoF Visitor Pattern"></p><p>In code, this translates to:</p><pre><code>void Main()
+{
+	List&lt;IVisitable&gt; entities = new List&lt;IVisitable&gt;{
+		new A(),
+		new B()
+	};
+	
+	IVisitor v1 = new Visitor1();
+	IVisitor v2 = new Visitor2();
+	
+	entities.ForEach(e =&gt; e.Accept(v1));
+	entities.ForEach(e =&gt; e.Accept(v2));
+}
+
+
+public class A : IVisitable 
+{
+	public void Accept(IVisitor visitor){
+		visitor.VisitA(this);
+	}
+}
+
+public class B : A, IVisitable {
+	public new void Accept(IVisitor visitor){
+		visitor.VisitB(this);
+	}
+}
+
+
+
+public interface IVisitable {
+	 void Accept(IVisitor visitor);
+}
+
+public interface IVisitor {
+	void VisitA(A a);
+	void VisitB(B b);
+}
+
+public class Visitor1 : IVisitor {
+	public void VisitA(A a){
+		Console.WriteLine(&quot;Visited A from Visitor1&quot;);
+	}
+	
+		public void VisitB(B b){
+		Console.WriteLine(&quot;Visited B from Visitor1&quot;);
+	}
+}
+
+public class Visitor2 : IVisitor {
+	public void VisitA(A a){
+		Console.WriteLine(&quot;Visited A from Visitor2&quot;);
+	}
+	
+		public void VisitB(B b){
+		Console.WriteLine(&quot;Visited B from Visitor2&quot;);
+	}
+}
+</code></pre><p>The above outputs:</p><pre><code>Visited A from Visitor1
+Visited B from Visitor1
+Visited A from Visitor2
+Visited B from Visitor2
+</code></pre><p>The double dispatch is achieved thanks to both the <code>Accept</code> and the <code>Visit</code> methods. <code>Accept</code> Exists in <code>IVisitable</code> and takes care of variation in the algorithm axis, this would be the <em>first</em> dispatch. On the other hand, <code>Visit</code> exists in <code>IVisitor</code>, and has specific names for each concrete <code>IVisitable</code>, so that way there is no ambiguity, and we can achieve variation in the structural (class hierarchy) axis. This is the <em>second</em> dispatch and it is done inside the <code>Accept</code> method, where <code>Visit</code> is invoked.</p><p>We can tweak this code a little bit to leverage operator overloading. Since <code>Visit</code> is invoked inside a concrete implementation of <code>Accept</code>, inside this scope, the compiler is able to recognize the concrete type of <code>this</code> without ambiguity. This helps us avoid having different names for each concrete Visit method, variation is done with the parameters type themselves.</p><p>Resulting code:</p><pre><code>void Main()
+{
+	List&lt;IVisitable&gt; entities = new List&lt;IVisitable&gt;{
+		new A(),
+		new B()
+	};
+	
+	IVisitor v1 = new Visitor1();
+	IVisitor v2 = new Visitor2();
+	
+	entities.ForEach(e =&gt; e.Accept(v1));
+	entities.ForEach(e =&gt; e.Accept(v2));
+}
+
+
+public class A : IVisitable 
+{
+	public void Accept(IVisitor visitor){
+		visitor.Visit(this);
+	}
+}
+
+public class B : A, IVisitable {
+	public new void Accept(IVisitor visitor){
+		visitor.Visit(this);
+	}
+}
+
+
+
+public interface IVisitable {
+	 void Accept(IVisitor visitor);
+}
+
+public interface IVisitor {
+	void Visit(A a);
+	void Visit(B b);
+}
+
+public class Visitor1 : IVisitor {
+	public void Visit(A a){
+		Console.WriteLine(&quot;Visited A from Visitor1&quot;);
+	}
+	
+		public void Visit(B b){
+		Console.WriteLine(&quot;Visited B from Visitor1&quot;);
+	}
+}
+
+public class Visitor2 : IVisitor {
+	public void Visit(A a){
+		Console.WriteLine(&quot;Visited A from Visitor2&quot;);
+	}
+	
+		public void Visit(B b){
+		Console.WriteLine(&quot;Visited B from Visitor2&quot;);
+	}
+}
+</code></pre><p>So, what are the advantages of using the traditional Visitor Pattern?</p><ul><li>Language-agnostic, we don&rsquo;t even need oeprator overloading for it to work</li><li>Variation in the two dimensions we wanted</li><li>Easy to extend by adding new visitors</li></ul><p>But it also comes with a few disadvantages:</p><ul><li>We ended up having to modify our entities after all (not too much though).</li><li>Adding a new entity subclass may require to modify all of our existing visitors</li></ul><p>Now, this is a pretty good solution, but can we do better by using C#-specific features?</p><h2 id=dynamic-visitors>Dynamic Visitors</h2><p>C# supports late-binding with the use of the <code>dynamic</code> keyword. <a href=https://blogs.u2u.be/kris/post/Farewell-Visitor>With this, we can make our visitor implementation less verbose, and even better, we can go back to our original premise of <strong>adding behavior without touching the visitable classes</strong></a>.</p><pre><code>void Main()
+{
+	List&lt;dynamic&gt; entities = new List&lt;dynamic&gt;{
+		new A(),
+		new B()
+	};
+
+	
+	IVisitor v1 = new Visitor1();
+	IVisitor v2 = new Visitor2();
+	
+	entities.ForEach(e =&gt; v1.Visit(e));
+	entities.ForEach(e =&gt; v2.Visit(e));
+}
+
+
+public class A  {}
+
+public class B : A {}
+
+
+public interface IVisitor {
+	void Visit(A a);
+	void Visit(B b);
+}
+
+public class Visitor1 : IVisitor {
+	public void Visit(A a){
+		Console.WriteLine(&quot;Visited A from Visitor1&quot;);
+	}
+	
+		public void Visit(B b){
+		Console.WriteLine(&quot;Visited B from Visitor1&quot;);
+	}
+}
+
+public class Visitor2 : IVisitor {
+	public void Visit(A a){
+		Console.WriteLine(&quot;Visited A from Visitor2&quot;);
+	}
+	
+		public void Visit(B b){
+		Console.WriteLine(&quot;Visited B from Visitor2&quot;);
+	}
+}
+</code></pre><p>Output remains the same:</p><pre><code>Visited A from Visitor1
+Visited B from Visitor1
+Visited A from Visitor2
+Visited B from Visitor2
+</code></pre><p>As we can see, our entities now don&rsquo;t need to implement any particular interface. Double dispatch and disambiguation are achieved not by an <code>Accept</code> in a concrete scope, but by leveraging C#&rsquo;s <strong>dynamic dispatch</strong>. When <code>Visit</code> is invoked in the above example, the parameter passed is dynamic, <a href=https://docs.microsoft.com/en-us/archive/blogs/samng/dynamic-in-c-iii-a-slight-twist>so the method overload resolution is done <strong>using the runtime type and not the static type</strong></a>, this way, the correct concrete type is selected, and we can achieve the same variation without altering classess or implementing interfaces.</p><h3 id=dynamic-extension-method-visitor>Dynamic Extension Method Visitor</h3><p>Now we have a pretty decent solution. We can come closer to the original extension-method based solution if we make the dynamic dispatch happen in another place:</p><pre><code>void Main()
+{
+	List&lt;IBlah&gt; entities = new List&lt;IBlah&gt;{
+		new A(),
+		new B()
+	};
+	
+	entities.ForEach(e =&gt; e.DoWork());
+}
+
+
+public interface IBlah {}
+public class A : IBlah  {}
+
+public class B : A {}
+
+
+public static class Extensions {
+	public static void DoWork(this IBlah obj){
+		dynamic x = obj;
+		Visit(x);
+	}
+	
+	
+	private static void Visit(A a){
+		Console.WriteLine(&quot;Visiting A from extension&quot;);
+	}
+	
+	private static void Visit(B b){
+		Console.WriteLine(&quot;Visiting B from extension&quot;);
+	}
+
+}
+</code></pre><p>Output:</p><pre><code>Visiting A from extension
+Visiting B from extension
+</code></pre><p>We have achieved extension method with dynamic dispatch! This is also pretty good as the syntactic sugar now makes our <code>DoWork</code> API easier to use. We can invoke it just like if it were defined on IBlah.</p><h3 id=dynamic-runtime-visitor>Dynamic Runtime Visitor</h3><p>Finally, if we don&rsquo;t want to go the static class route, we can go towards a more traditional Visitor implementation (with the <code>Accept</code> API in our entities) but without requiring them to implement any interface:</p><pre><code>void Main()
+{
+	List&lt;IBlah&gt; entities = new List&lt;IBlah&gt;{
+		new A(),
+		new B()
+	};
+
+	
+	IVisitor v1 = new Visitor1();
+	IVisitor v2 = new Visitor2();
+	
+	entities.ForEach(e =&gt; e.Accept(v1));
+	entities.ForEach(e =&gt; e.Accept(v2));
+}
+
+public interface IBlah {}
+
+public class A : IBlah  {}
+
+public class B : A {}
+
+
+public interface IVisitor {
+	void Visit(A a);
+	void Visit(B b);
+}
+
+public class Visitor1 : IVisitor {
+	public void Visit(A a){
+		Console.WriteLine(&quot;Visited A from Visitor1&quot;);
+	}
+	
+		public void Visit(B b){
+		Console.WriteLine(&quot;Visited B from Visitor1&quot;);
+	}
+}
+
+public class Visitor2 : IVisitor {
+	public void Visit(A a){
+		Console.WriteLine(&quot;Visited A from Visitor2&quot;);
+	}
+	
+		public void Visit(B b){
+		Console.WriteLine(&quot;Visited B from Visitor2&quot;);
+	}
+}
+
+
+public static class VisitableExtensions {
+	public static void Accept(this IBlah blah, IVisitor visitor){
+		dynamic x = blah;
+		visitor.Visit(x);
+	}
+}
+</code></pre><p>With only one extension method we enable our entities to have an <code>Accept</code> method, which takes care of the double dispatch, and by accepting an <code>IVisitor</code> we have a more ergonomic and extensible Visitor implementation, that can be more easily handled in runtime.</p></div></div><div class="col-sm-12 col-md-3"><nav id=TableOfContents class=sticky-top><ul><li><a href=#extension-methods>Extension Methods</a></li><li><a href=#traditional-visitor-pattern>Traditional Visitor Pattern</a></li><li><a href=#dynamic-visitors>Dynamic Visitors</a><ul><li><a href=#dynamic-extension-method-visitor>Dynamic Extension Method Visitor</a></li><li><a href=#dynamic-runtime-visitor>Dynamic Runtime Visitor</a></li></ul></li></ul></nav></div></div><div class=row><div class="col-md-9 col-lg-9"><div class=navigation><div class=row><div class="col-12 col-md-6"><div class="mx-0 mx-md-4 mt-4 text-left"><a href=https://npadula.com/blog/posts/foundations-intuition-programming-music/><span class=icon><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 477.175 477.175"><path d="M145.188 238.575l215.5-215.5c5.3-5.3 5.3-13.8.0-19.1s-13.8-5.3-19.1.0l-225.1 225.1c-5.3 5.3-5.3 13.8.0 19.1l225.1 225c2.6 2.6 6.1 4 9.5 4s6.9-1.3 9.5-4c5.3-5.3 5.3-13.8.0-19.1l-215.4-215.5z"/></svg></span><span class=text>Foundations & Intuition: Programming and Music</span></a></div></div><div class="col-12 col-md-6"></div></div></div></div></div></div></div><div class="my-4 footer"><div class=container><div class="row justify-content-center"><div class="col-sm-12 col-md-6 col-lg-5"><div class="mx-0 mx-md-4 mb-2 text-center text-md-left"><div><a class="mx-1 mr-md-2 ml-md-0 text-tags" href=https://npadula.com/blog/tags/>Tags</a></div></div></div><div class="col-sm-12 col-md-6 col-lg-5"><div class="mx-0 mx-md-4 text-center text-md-right"><a href=https://github.com/npadula target=_blank class="mx-1 ml-md-2 mr-md-0 icon" aria-label=GitHub><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M8 0C3.58.0.0 3.582.0 8c0 3.535 2.292 6.533 5.47 7.59.4.075.547-.172.547-.385.0-.19-.007-.693-.01-1.36-2.226.483-2.695-1.073-2.695-1.073-.364-.924-.89-1.17-.89-1.17-.725-.496.056-.486.056-.486.803.056 1.225.824 1.225.824.714 1.223 1.873.87 2.33.665.072-.517.278-.87.507-1.07-1.777-.2-3.644-.888-3.644-3.953.0-.873.31-1.587.823-2.147-.09-.202-.36-1.015.07-2.117.0.0.67-.215 2.2.82.64-.178 1.32-.266 2-.27.68.004 1.36.092 2 .27 1.52-1.035 2.19-.82 2.19-.82.43 1.102.16 1.915.08 2.117.51.56.82 1.274.82 2.147.0 3.073-1.87 3.75-3.65 3.947.28.24.54.73.54 1.48.0 1.07-.01 1.93-.01 2.19.0.21.14.46.55.38C13.71 14.53 16 11.53 16 8c0-4.418-3.582-8-8-8"/></svg></a><a href class="mx-1 ml-md-2 mr-md-0 icon" aria-label=RSS><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M12.8 16C12.8 8.978 7.022 3.2.0 3.2V0c8.777.0 16 7.223 16 16h-3.2zM2.194 11.61c1.21.0 2.195.985 2.195 2.196.0 1.21-.99 2.194-2.2 2.194C.98 16 0 15.017.0 13.806c0-1.21.983-2.195 2.194-2.195zM10.606 16h-3.11c0-4.113-3.383-7.497-7.496-7.497v-3.11c5.818.0 10.606 4.79 10.606 10.607z"/></svg></a></div></div></div></div></div><script src=https://code.jquery.com/jquery-3.4.1.slim.min.js integrity=sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n crossorigin=anonymous></script><script src=https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js integrity=sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo crossorigin=anonymous></script><script src=https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js integrity=sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6 crossorigin=anonymous></script><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js integrity="sha256-1zu+3BnLYV9LdiY85uXMzii3bdrkelyp37e0ZyTAQh0=" crossorigin=anonymous></script><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/bash.min.js defer></script><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/css.min.js defer></script><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/diff.min.js defer></script><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/django.min.js defer></script><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/javascript.min.js defer></script><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/python.min.js defer></script><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/yaml.min.js defer></script><script>window.addEventListener('load',function(){hljs.initHighlighting()},!0)</script><script src=https://cdnjs.cloudflare.com/ajax/libs/progressively/1.2.5/progressively.min.js integrity="sha256-LvFVlLdfGI3WeEH+8Ni4kxLm02g2GlOfeGCGLXfRk/U=" crossorigin=anonymous></script><script>window.addEventListener('load',function(){progressively.init({delay:30,throttle:50})},!0)</script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-175222532-1"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','UA-175222532-1')</script></body></html>
